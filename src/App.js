@@ -1,31 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 import './output.css';
-import { PlaybookCard } from './components/playbook/PlaybookCard';
+
 import { PlayBookPage } from './pages/PlayBookPage';
 import {
-  PlayBookEditor
-} from './pages/PlayBookEditor';
+  PlayBookEditorPage
+} from './pages/PlayBookEditorPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-9/12 mx-auto">
       {/* <PlayBookPage /> */}
-      <PlayBookEditor />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <PlayBookEditorPage />
     </div>
   );
 }
