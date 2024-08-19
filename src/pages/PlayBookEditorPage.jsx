@@ -1,10 +1,12 @@
 import { EnvDropDown } from "../components/playbook/EnvDropDown";
 import { SaveButton, HistoryButton, DeployButton } from "../components/buttons";
+import { useParams } from 'react-router-dom';
 
-export function PlayBookEditorPage() {
+
+export function PlayBookEditorPage({title}) {
   return (
     <div>
-      <div className="font-bold text-4xl" style={{fontSize: '2.25rem'}}>Get User Info and switch to Issue refund</div>
+      <div className="font-bold text-4xl" style={{fontSize: '2.25rem'}}>{title}</div>
       <div className="flex justify-between mt-4">
         <div className="flex-none">
           <EnvDropDown />
@@ -25,5 +27,14 @@ export function PlayBookEditorPage() {
         This is where the playbook content goes
       </div>
     </div>
+  )
+}
+
+
+export function PlayBookEditorPageContainer() {
+  const { playbookId } = useParams();
+
+  return (
+    <PlayBookEditorPage title={`Playbook ID: ${playbookId}`}/>
   )
 }
