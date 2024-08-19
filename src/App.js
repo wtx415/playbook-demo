@@ -5,6 +5,7 @@ import {
 } from './pages';
 import {
   BrowserRouter,
+  Navigate,
   Routes,
   Route,
 } from "react-router-dom";
@@ -15,6 +16,7 @@ function App() {
     <div className="w-10/12 mx-auto">
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/playbook" />} />
           <Route path="playbook" element={<PlayBookPageContainer />} />
           <Route path="playbook/:playbookId" element={<PlayBookEditorPageContainer />} />
         </Routes>
